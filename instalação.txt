@@ -1,0 +1,22 @@
+instalar o python
+
+https://www.python.org/downloads/
+
+descompacte a pasta 
+
+acesse ela no cmd
+
+# Crie um ambiente virtual
+py -m venv venv
+
+# Ative o ambiente virtual
+# No Windows:
+venv\Scripts\activate
+# No macOS/Linux:
+source venv/bin/activate
+
+# Instale o Flask
+pip install flask
+
+#Execute o Servidor Flask
+py app.py
