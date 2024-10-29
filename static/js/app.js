@@ -1,19 +1,21 @@
+// app.js
+
 class Produto {
     constructor(nome, preco, descricao, imagem) {
         this.nome = nome;
         this.preco = preco;
         this.descricao = descricao;
-        this.imagem = imagem;  // Atributo para a imagem
+        this.imagem = imagem;
     }
 }
 
 const produtos = [
-    new Produto('Caneta', 1.50, 'Caneta azul', 'static/img/caneta.jpg'),
-    new Produto('Lápis', 0.75, 'Lápis preto HB', 'https://example.com/lapis.jpg'),
-    new Produto('Caderno', 10.00, 'Caderno de 200 páginas', 'https://example.com/caderno.jpg'),
-    new Produto('Borracha', 0.50, 'Borracha branca', 'https://example.com/borracha.jpg'),
-    new Produto('Apontador', 1.20, 'Apontador metálico', 'https://example.com/apontador.jpg')
+    new Produto('Zorba', 35.00, 'Cueca Tamanho G', 'static/img/c1.jpg')
 ];
+
+
+
+
 
 function bubbleSortProdutos(arr) {
     let n = arr.length;
@@ -28,32 +30,53 @@ function bubbleSortProdutos(arr) {
 }
 
 function buscarProduto() {
-    const nomeBusca = document.getElementById('searchInput').value;
+    const nomeBusca = document.getElementById('searchInput').value || "";
     bubbleSortProdutos(produtos);
 
     const resultados = produtos.filter(produto => produto.nome.toLowerCase().includes(nomeBusca.toLowerCase()));
     exibirProdutos(resultados);
 }
 
+
+
 function exibirProdutos(produtos) {
     const productList = document.getElementById('productList');
+    if (!productList) {
+        console.error('Elemento "productList" não encontrado');
+        return;
+    }
     productList.innerHTML = '';
+
+    if (produtos.length === 0) {
+        productList.innerHTML = `<h3 class="text-center text-muted">Nenhum produto encontrado.</h3>`;
+        return;
+    }
+
+    const productContainer = document.createElement('div');
+    productContainer.className = "row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center";
 
     produtos.forEach(produto => {
         const productCard = `
-            <div class="col-md-4 mb-3">
-                <div class="card">
-                    <img src="${produto.imagem}" class="card-img-top" alt="${produto.nome}">
-                    <div class="card-body">
-                        <h5 class="card-title">${produto.nome}</h5>
-                        <p class="card-text">Descrição: ${produto.descricao}</p>
-                        <p class="card-text">Preço: R$${produto.preco.toFixed(2)}</p>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <img class="card-img-top" src="${produto.imagem}" alt="${produto.nome}">
+                    <div class="card-body p-4 text-center">
+                        <h5 class="fw-bolder">${produto.nome}</h5>
+                        <p>R$${produto.preco.toFixed(2)}</p>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver mais</a></div>
                     </div>
                 </div>
             </div>
         `;
-        productList.insertAdjacentHTML('beforeend', productCard);
+        productContainer.insertAdjacentHTML('beforeend', productCard);
     });
+
+    productList.appendChild(productContainer);
 }
 
-document.addEventListener('DOMContentLoaded', () => exibirProdutos(produtos));
+// Carregar todos os produtos ao carregar a página
+document.addEventListener("DOMContentLoaded", function() {
+    exibirProdutos(produtos);
+});
