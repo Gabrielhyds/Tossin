@@ -2,11 +2,13 @@ instalar o python
 
 https://www.python.org/downloads/
 
-descompacte a pasta 
+baixar zip do github 
 
-acesse ela no cmd
+https://github.com/Gabrielhyds/Tossin/archive/refs/heads/master.zip
 
-# Crie um ambiente virtual
+apos baixar, descompactar a pasta na sua maquina
+
+# Crie um ambiente virtual, acessando o cmd digite os comandos
 py -m venv venv
 
 # Ative o ambiente virtual
