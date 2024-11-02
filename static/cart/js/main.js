@@ -6,9 +6,9 @@ $(function(){
         enableAllSteps: true,
         transitionEffectSpeed: 300,
         labels: {
-            next: "Continue",
-            previous: "Back",
-            finish: 'Proceed to checkout'
+            next: "Continuar",
+            previous: "Voltar",
+            finish: 'Finalizar Compra'
         },
         onStepChanging: function (event, currentIndex, newIndex) { 
             if ( newIndex >= 1 ) {
@@ -44,7 +44,7 @@ $(function(){
     	$("#wizard").steps('next');
     })
     $('.backward').click(function(){
-        $("#wizard").steps('previous');
+        $("#wizard").steps('/');
     })
     // Click to see password 
     $('.password i').click(function(){

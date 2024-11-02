@@ -47,6 +47,7 @@ function buscarProduto() {
     //filtro: ignora diferenças entre maiúsculas e minúsculas
     const resultados = produtos.filter(produto => produto.nome.toLowerCase().includes(nomeBusca.toLowerCase()));
     
+
     // Exibe os produtos filtrados na interface
     exibirProdutos(resultados);
 }
@@ -63,6 +64,10 @@ function exibirProdutos(produtos) {
         productList.innerHTML = `<h3 class="text-center text-muted">Nenhum produto encontrado.</h3>`;
         return;
     }
+
+    // Limpa o conteúdo atual do 'productList' para garantir que a lista será atualizada
+    productList.innerHTML = '';
+    
     // Cria um container 'div' que agrupará todos os cards de produtos
     const productContainer = document.createElement('div');
 
