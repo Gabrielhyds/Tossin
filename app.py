@@ -18,6 +18,11 @@ def prod():
     # Por exemplo, você pode usar o ID para encontrar o produto correspondente em uma lista de produtos
     return render_template('prod.html',  produto_id=produto_id)  # Enviando o ID para o template
 
+# Define a rota para a página inicial ("/")
+@app.route('/cart')
+def cart():
+    # Renderiza e retorna o template 'index.html' quando a rota inicial é acessada
+    return render_template('cart.html')
 
 # Verifica se o script está sendo executado diretamente
 if __name__ == '__main__':
