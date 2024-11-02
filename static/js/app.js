@@ -81,7 +81,7 @@ function exibirProdutos(produtos) {
                         <p>R$${produto.preco.toFixed(2)}</p>
                     </div>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="prod?id=${produto.id}">Ver mais</a></div>
+                        <div class="text-center"><a class="btn btn-outline-dark" href="prod?id=${produto.id}">Ver mais</a></div>
                     </div>
                 </div>
             </div>
