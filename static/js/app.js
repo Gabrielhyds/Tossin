@@ -15,7 +15,8 @@ class Produto {
 //vetor produtos, do tipo objeto
 const produtos = [
     new Produto('1','7896924303364','Zorba', 35.00, 'Cueca Tamanho G','Conforto e estilo se encontram na Cueca Zorba, uma peça essencial para o guarda-roupa masculino. Feita com um tecido de alta qualidade, ela proporciona uma sensação suave contra a pele, garantindo conforto durante todo o dia. Seu design moderno e corte perfeito oferecem um ajuste ideal, valorizando a silhueta sem abrir mão da liberdade de movimentos.', 'static/img/c1.jpg'),
-    new Produto('2','7899303536759','zimba', 35.00, 'Cueca Tamanho G','A Cueca ComfortFit é a escolha ideal para quem valoriza conforto sem abrir mão do estilo. Feita com um tecido de algodão premium, ela proporciona uma sensação suave contra a pele, tornando-a perfeita para o uso diário. O design anatômico se adapta perfeitamente ao corpo, garantindo que você se sinta seguro e confortável em qualquer situação.','static/img/c5.jpg')
+    new Produto('2','7899303536759','zimba', 35.00, 'Cueca Tamanho G','A Cueca ComfortFit é a escolha ideal para quem valoriza conforto sem abrir mão do estilo. Feita com um tecido de algodão premium, ela proporciona uma sensação suave contra a pele, tornando-a perfeita para o uso diário. O design anatômico se adapta perfeitamente ao corpo, garantindo que você se sinta seguro e confortável em qualquer situação. Confeccionadas em Algodão e Poliester sem costuras marcantes. Garantem maior conforto e liberdade de movimento. Modelagem moderna e confortável.','static/img/c5.jpg'),
+    new Produto('3','7892314748797','Cueca Boxer Algodão Sem Costura Zorba', 35.00, 'Cueca Tamanho G','Possuem proteção contra bactérias e maus odores. Feitas com tecnologia MaxFresh, que regula a sensação térmica.','static/img/cueca_preta.png')
 ];
 
 //função para ordenar os produtos usamos o 
@@ -78,18 +79,18 @@ function exibirProdutos(produtos) {
     produtos.forEach(produto => {
         // Template
         const productCard = `
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="${produto.imagem}" alt="${produto.nome}">
-                    <div class="card-body p-4 text-center">
-                        <h5 class="fw-bolder">${produto.nome}</h5>
-                        <p>R$${produto.preco.toFixed(2)}</p>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark" href="prod?id=${produto.id}">Ver mais</a></div>
-                    </div>
+        <div class="col mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="${produto.imagem}" alt="${produto.nome}">
+                <div class="card-body p-4 text-center">
+                    <h5 class="fw-bolder">${produto.nome}</h5>
+                    <p>R$${produto.preco.toFixed(2)}</p>
                 </div>
-            </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark" href="prod?id=${produto.id}">Ver mais</a></div>
+                </div>
+            </div>  
+        </div>
         `;
         // Adiciona o card do produto dentro do 'productContainer'
         productContainer.insertAdjacentHTML('beforeend', productCard);
