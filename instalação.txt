@@ -1,24 +1,30 @@
-instalar o python
+# 1ª passo - instalar o python
 
 https://www.python.org/downloads/
 
-baixar zip do github 
+# 2ª passo - baixar o zip do projeto atualizado no github 
 
-https://github.com/Gabrielhyds/Tossin/archive/refs/heads/master.zip
+https://github.com/Gabrielhyds/Tossin/
 
-apos baixar, descompactar a pasta na sua maquina
+# 3ª passo - descompactar o arquivo e salvar no seu desktop/notebook
 
-# Crie um ambiente virtual, acessando o cmd digite os comandos
-py -m venv venv
+# 4ª passo - Abrir o CMD (Prompt de comandos do windows)
 
-# Ative o ambiente virtual
-# No Windows:
-venv\Scripts\activate
-# No macOS/Linux:
-source venv/bin/activate
+# 5ª passo - navegar na pasta(diretorio) onde você descompactou
+    # exemplo você pode usar usar os comandos:
+        # dir - listar todos os arquivos do diretorio onde você está
+        # exemplo de como navegar entre pastas - cd  /NovaPasta 
 
-# Instale o Flask
-pip install flask
+# 6ª passo - estando na pasta do projeto instale o flask
+   pip install flask
 
-#Execute o Servidor Flask
-py app.py
+# 7ª passo - Crie um ambiente virtual
+    py -m venv venv
+
+# 8ª passo - Ative o ambiente virtual
+    venv\Scripts\activate
+
+# 9ª passo - Execute o Servidor flask
+    py app.py
+    # chegando até aqui você receberá um ip de acesso http://127.0.0.1:5000
+    # abra o navagador e cole esse link acima
