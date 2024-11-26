@@ -7,6 +7,8 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="/static/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <style>
         /* Personalizando o ícone do toggler */
@@ -75,9 +77,46 @@
         }
         /* Demo purposes only */
         body {
-        background-color: #212121;
+        background-color: #000000;
         }
+        .product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  text-align: center;
+}
 
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.product-card .info {
+  margin-top: 8px;
+}
+
+.product-card .rating {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  color: #ffc107; /* Cor amarela para estrelas */
+}
+
+.product-card .rating i {
+  margin: 0 2px;
+}
+
+.card-img-top{
+    display: flex;
+    justify-content: center;
+    padding:10px;
+    width:initial;
+    height: 300px;
+    border:#000000 solid 0.5px;
+    border-radius: 10px;
+}
 </style>
 <body style="background-color: #e7f1ff;">
   <!--incluindo a navbar-->
@@ -97,7 +136,7 @@
               <img src="static/img/tossin2.png" class="d-block w-100 mx-auto" alt="..." width="3000px" height="300px">
           </div>
           <div class="carousel-item" style="max-height: 500px;">
-              <img src="..." class="d-block w-100 mx-auto" alt="..." width="3000px" height="200px">
+              <img src="static/img/b3.png" class="d-block w-100 mx-auto" alt="..." width="3000px" height="300px">
           </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
