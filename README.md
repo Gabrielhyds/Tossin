@@ -4,6 +4,7 @@ Neste trabalho, temos como objetivo criar um projeto, com elementos de duas mat�
 Nossa primeira pergunta foi: Como fazer uma “fusão” entre essas matérias?
 Este projeto é uma aplicação web para exibição de um catálogo de produtos. Os arquivos HTML, CSS, JavaScript e imagens são disponibilizados por um servidor básico implementado com **Flask**.
 
+## link dos slides: https://www.canva.com/design/DAGU-hBJUhY/BySOzPrqDruNjmczRE85TA/edit?utm_content=DAGU-hBJUhY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 ---
 
 ## 🛠 Funcionalidades
